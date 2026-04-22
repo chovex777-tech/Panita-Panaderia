@@ -1,0 +1,8 @@
+{
+  "horario_lv": "Lun - Vie: 9:00 - 20:00",
+  "horario_sd": "Sáb - Dom: 10:00 - 18:00",
+  "telefono": "+52 55 1234 5678",
+  "email": "hola@chibicheff.com",
+  "direccion": "Av. Kawaii 123, Col. Chibi Park, CDMX, México",
+  "footer_mensaje": "Hecho con amor y mucha azúcar 💖"
+}

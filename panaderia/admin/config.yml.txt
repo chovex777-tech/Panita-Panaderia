@@ -1,0 +1,70 @@
+backend:
+  name: github
+  repo: TU_USUARIO/TU_REPOSITORIO   # 🔴 CAMBIA ESTO
+  branch: main
+
+media_folder: "assets/img/products"
+public_folder: "/assets/img/products"
+
+collections:
+  # ========== PRODUCTOS ==========
+  - name: "productos_destacados"
+    label: "🍞 Productos Destacados"
+    folder: "data/productos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Precio", name: "precio", widget: "number", valueType: "int" }
+      - { label: "Descripción", name: "descripcion", widget: "text" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
+      - { label: "Badge (opcional)", name: "badge", widget: "string", required: false }
+      - { label: "Destacado", name: "destacado", widget: "boolean", default: false }
+
+  # ========== ESPECIALIDADES ==========
+  - name: "especialidades"
+    label: "🌸 Especialidades"
+    folder: "data/especialidades"
+    create: true
+    fields:
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Descripción", name: "descripcion", widget: "text" }
+      - { label: "Ícono", name: "icono", widget: "string", hint: "Emoji o texto, ej: 🐻" }
+      - { label: "Etiqueta", name: "etiqueta", widget: "string", required: false }
+
+  # ========== TESTIMONIOS ==========
+  - name: "testimonios"
+    label: "💖 Testimonios"
+    folder: "data/testimonios"
+    create: true
+    fields:
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Comentario", name: "comentario", widget: "text" }
+      - { label: "Avatar (emoji)", name: "avatar", widget: "string", default: "🌸" }
+      - { label: "Rol", name: "rol", widget: "string", default: "Cliente feliz" }
+
+  # ========== CONFIGURACIÓN GENERAL ==========
+  - name: "configuracion"
+    label: "⚙️ Configuración"
+    files:
+      - name: "general"
+        label: "Datos de la panadería"
+        file: "data/config.json"
+        fields:
+          - { label: "Horario Lunes-Viernes", name: "horario_lv", widget: "string" }
+          - { label: "Horario Sábado-Domingo", name: "horario_sd", widget: "string" }
+          - { label: "Teléfono", name: "telefono", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Dirección", name: "direccion", widget: "text" }
+          - { label: "Mensaje promocional footer", name: "footer_mensaje", widget: "text" }
+
+  # ========== EQUIPO CHIBI ==========
+  - name: "equipo"
+    label: "🎀 Equipo Chibi"
+    folder: "data/equipo"
+    create: true
+    fields:
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Rol", name: "rol", widget: "string" }
+      - { label: "Descripción", name: "descripcion", widget: "text" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
