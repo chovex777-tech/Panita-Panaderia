@@ -7,7 +7,7 @@ media_folder: "assets/img/products"
 public_folder: "/assets/img/products"
 
 collections:
-  # ========== PRODUCTOS (un archivo por producto) ==========
+  # ========== PRODUCTOS ==========
   - name: "productos"
     label: "🍞 Productos"
     label_singular: "Producto"
@@ -19,12 +19,12 @@ collections:
     summary: "{{fields.nombre}} - ${{fields.precio}}"
     fields:
       - { label: "Nombre", name: "nombre", widget: "string" }
-      - { label: "Precio", name: "precio", widget: "number", valueType: "int" }
+      - { label: "Precio", name: "precio", widget: "number", value_type: "int" }
       - { label: "Descripción", name: "descripcion", widget: "text" }
       - { label: "Imagen", name: "imagen", widget: "image" }
       - { label: "Badge", name: "badge", widget: "string", required: false }
 
-  # ========== TESTIMONIOS (un archivo por testimonio) ==========
+  # ========== TESTIMONIOS ==========
   - name: "testimonios"
     label: "💖 Testimonios"
     label_singular: "Testimonio"
@@ -40,7 +40,7 @@ collections:
       - { label: "Avatar", name: "avatar", widget: "string", default: "🌸" }
       - { label: "Rol", name: "rol", widget: "string", default: "Cliente feliz" }
 
-  # ========== ESPECIALIDADES (un archivo por especialidad) ==========
+  # ========== ESPECIALIDADES ==========
   - name: "especialidades"
     label: "🌸 Especialidades"
     label_singular: "Especialidad"
@@ -56,7 +56,7 @@ collections:
       - { label: "Icono", name: "icono", widget: "string", default: "🍞" }
       - { label: "Etiqueta", name: "etiqueta", widget: "string", required: false }
 
-  # ========== EQUIPO (un archivo por miembro) ==========
+  # ========== EQUIPO ==========
   - name: "equipo"
     label: "🎀 Equipo Chibi"
     label_singular: "Miembro"
@@ -72,7 +72,7 @@ collections:
       - { label: "Descripción", name: "descripcion", widget: "text" }
       - { label: "Imagen", name: "imagen", widget: "image" }
 
-  # ========== CONFIGURACIÓN (un solo archivo) ==========
+  # ========== CONFIGURACIÓN ==========
   - name: "configuracion"
     label: "⚙️ Configuración"
     files:
