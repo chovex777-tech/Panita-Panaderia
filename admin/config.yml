@@ -2,6 +2,7 @@ backend:
   name: github
   repo: chovex777-tech/Panita-Panaderia
   branch: main
+  base_url: https://chovex777-tech.github.io/Panita-Panaderia
 
 media_folder: "assets/img/products"
 public_folder: "/assets/img/products"
