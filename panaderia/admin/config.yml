@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: chovex777-tech/Panita-Panaderia
+  branch: main
+
+media_folder: "images/productos"
+public_folder: "/images/productos"
+
+collections:
+  - name: "productos"
+    label: "Productos"
+    folder: "panaderia/productos"
+    create: true
+    fields:
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Precio", name: "precio", widget: "number" }
+      - { label: "Descripción", name: "descripcion", widget: "text" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
+      - { label: "Destacado", name: "destacado", widget: "boolean", default: false }
+
+  - name: "configuracion"
+    label: "Configuración"
+    files:
+      - name: "general"
+        label: "Datos de la panadería"
+        file: "panaderia/config.json"
+        fields:
+          - { label: "Nombre local", name: "nombre_local", widget: "string" }
+          - { label: "Horario", name: "horario", widget: "string" }
+          - { label: "Mensaje promocional", name: "promo", widget: "text" }
