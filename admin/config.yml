@@ -9,75 +9,12 @@ public_folder: "/assets/img/products"
 collections:
   - name: "productos"
     label: "🍞 Productos"
-    label_singular: "Producto"
     folder: "data/productos"
     create: true
     extension: json
     slug: "{{slug}}"
-    identifier_field: "nombre"
-    summary: "{{fields.nombre}} - ${{fields.precio}}"
     fields:
       - { label: "Nombre", name: "nombre", widget: "string" }
-      - { label: "Precio", name: "precio", widget: "number", value_type: "int" }
+      - { label: "Precio", name: "precio", widget: "number" }
       - { label: "Descripción", name: "descripcion", widget: "text" }
-      - { label: "Imagen", name: "imagen", widget: "image" }
-      - { label: "Badge", name: "badge", widget: "string", required: false }
-
-  - name: "testimonios"
-    label: "💖 Testimonios"
-    label_singular: "Testimonio"
-    folder: "data/testimonios"
-    create: true
-    extension: json
-    slug: "{{slug}}"
-    identifier_field: "nombre"
-    summary: "{{fields.nombre}}"
-    fields:
-      - { label: "Nombre", name: "nombre", widget: "string" }
-      - { label: "Comentario", name: "comentario", widget: "text" }
-      - { label: "Avatar", name: "avatar", widget: "string", default: "🌸" }
-      - { label: "Rol", name: "rol", widget: "string", default: "Cliente feliz" }
-
-  - name: "especialidades"
-    label: "🌸 Especialidades"
-    label_singular: "Especialidad"
-    folder: "data/especialidades"
-    create: true
-    extension: json
-    slug: "{{slug}}"
-    identifier_field: "titulo"
-    summary: "{{fields.titulo}}"
-    fields:
-      - { label: "Título", name: "titulo", widget: "string" }
-      - { label: "Descripción", name: "descripcion", widget: "text" }
-      - { label: "Icono", name: "icono", widget: "string", default: "🍞" }
-      - { label: "Etiqueta", name: "etiqueta", widget: "string", required: false }
-
-  - name: "equipo"
-    label: "🎀 Equipo Chibi"
-    label_singular: "Miembro"
-    folder: "data/equipo"
-    create: true
-    extension: json
-    slug: "{{slug}}"
-    identifier_field: "nombre"
-    summary: "{{fields.nombre}} - {{fields.rol}}"
-    fields:
-      - { label: "Nombre", name: "nombre", widget: "string" }
-      - { label: "Rol", name: "rol", widget: "string" }
-      - { label: "Descripción", name: "descripcion", widget: "text" }
-      - { label: "Imagen", name: "imagen", widget: "image" }
-
-  - name: "configuracion"
-    label: "⚙️ Configuración"
-    files:
-      - name: "general"
-        label: "Datos de la panadería"
-        file: "data/config.json"
-        fields:
-          - { label: "Horario L-V", name: "horario_lv", widget: "string" }
-          - { label: "Horario S-D", name: "horario_sd", widget: "string" }
-          - { label: "Teléfono", name: "telefono", widget: "string" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Dirección", name: "direccion", widget: "text" }
-          - { label: "Mensaje Footer", name: "footer_mensaje", widget: "text" }
+      - { label: "Imagen", name: "imagen", widget: "image", required: false }
