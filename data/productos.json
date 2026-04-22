@@ -1,0 +1,34 @@
+[
+  {
+    "nombre": "Osito Chibi 🐻",
+    "precio": 35,
+    "descripcion": "Pan de leche con carita de osito, ojos de chispas de chocolate",
+    "imagen": "assets/img/products/chibi-bear-bread.jpg",
+    "badge": "⭐ Más kawaii",
+    "destacado": true
+  },
+  {
+    "nombre": "Conejito Croissant 🐰",
+    "precio": 45,
+    "descripcion": "Hojaldre con forma de conejito y orejitas crujientes",
+    "imagen": "assets/img/products/bunny-croissant.jpg",
+    "badge": "",
+    "destacado": true
+  },
+  {
+    "nombre": "Pan Arcoíris 🌈",
+    "precio": 55,
+    "descripcion": "7 capas de colores, sabor a nube y magia",
+    "imagen": "assets/img/products/rainbow-bread.jpg",
+    "badge": "🌈 Edición especial",
+    "destacado": true
+  },
+  {
+    "nombre": "Gatito Mochi 🐱",
+    "precio": 40,
+    "descripcion": "Pan estilo mochi suavecito con forma de gatito",
+    "imagen": "assets/img/products/cat-mochi.jpg",
+    "badge": "",
+    "destacado": true
+  }
+]

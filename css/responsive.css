@@ -1,0 +1,176 @@
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet y móvil */
+@media (max-width: 992px) {
+    .kawaii-title {
+        font-size: 3rem;
+    }
+    
+    .title-sub {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .title-decoration {
+        font-size: 1.3rem;
+        margin: 0 8px;
+    }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+    /* Navegación */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        box-shadow: var(--shadow);
+        transition: 0.3s ease;
+        gap: 25px;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-toggle {
+        display: block;
+    }
+    
+    /* Hero */
+    .hero {
+        margin-top: 60px;
+        min-height: auto;
+        padding: 60px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content h1 span {
+        font-size: 1.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        margin: 10px auto;
+        width: 220px;
+    }
+    
+    /* Títulos */
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Grids */
+    .specialties-grid,
+    .products-grid,
+    .testimonials-grid,
+    .characters-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-logo {
+        justify-content: center;
+    }
+    
+    .footer-newsletter form {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* Newsletter */
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .newsletter-form input {
+        width: 90%;
+        max-width: 280px;
+    }
+    
+    /* Productos */
+    .product-card {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+    .kawaii-title {
+        font-size: 1.8rem;
+    }
+    
+    .title-sub {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .title-decoration {
+        display: none;
+    }
+    
+    .specialty-card {
+        margin: 0 15px;
+        padding: 30px 20px;
+    }
+    
+    .product-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .product-price span {
+        font-size: 1.1rem;
+    }
+    
+    .btn-kawaii {
+        padding: 6px 14px;
+        font-size: 0.75rem;
+    }
+    
+    .character-img {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .footer-logo {
+        font-size: 1.1rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.7rem;
+    }
+}
