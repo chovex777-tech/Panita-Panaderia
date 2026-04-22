@@ -1,0 +1,53 @@
+backend:
+  name: github
+  repo: chovex777-tech/Panita-Panaderia
+  branch: main
+
+media_folder: "assets/img/products"
+public_folder: "/assets/img/products"
+
+collections:
+  - name: "productos"
+    label: "🍞 Productos"
+    folder: "data"
+    file: "data/productos.json"
+    create: false
+    fields:
+      - name: "lista"
+        label: "Lista de Productos"
+        widget: "list"
+        fields:
+          - { label: "Nombre", name: "nombre", widget: "string" }
+          - { label: "Precio", name: "precio", widget: "number" }
+          - { label: "Descripción", name: "descripcion", widget: "text" }
+          - { label: "Imagen", name: "imagen", widget: "image" }
+          - { label: "Badge", name: "badge", widget: "string", required: false }
+
+  - name: "testimonios"
+    label: "💖 Testimonios"
+    folder: "data"
+    file: "data/testimonios.json"
+    create: false
+    fields:
+      - name: "lista"
+        label: "Lista de Testimonios"
+        widget: "list"
+        fields:
+          - { label: "Nombre", name: "nombre", widget: "string" }
+          - { label: "Comentario", name: "comentario", widget: "text" }
+          - { label: "Avatar", name: "avatar", widget: "string" }
+          - { label: "Rol", name: "rol", widget: "string" }
+
+  - name: "configuracion"
+    label: "⚙️ Configuración"
+    files:
+      - name: "general"
+        label: "Datos"
+        file: "data/config.json"
+        fields:
+          - { label: "Horario L-V", name: "horario_lv", widget: "string" }
+          - { label: "Horario S-D", name: "horario_sd", widget: "string" }
+          - { label: "Teléfono", name: "telefono", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Dirección", name: "direccion", widget: "text" }
+          - { label: "Mensaje Footer", name: "footer_mensaje", widget: "text" }
