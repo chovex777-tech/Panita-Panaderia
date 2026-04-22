@@ -9,45 +9,91 @@ public_folder: "/assets/img/products"
 collections:
   - name: "productos"
     label: "🍞 Productos"
+    label_singular: "Producto"
     folder: "data"
     file: "data/productos.json"
     create: false
+    identifier_field: "nombre"
     fields:
       - name: "lista"
         label: "Lista de Productos"
+        label_singular: "Producto"
         widget: "list"
+        summary: "{{fields.nombre}}"
         fields:
-          - { label: "Nombre", name: "nombre", widget: "string" }
-          - { label: "Precio", name: "precio", widget: "number" }
-          - { label: "Descripción", name: "descripcion", widget: "text" }
-          - { label: "Imagen", name: "imagen", widget: "image" }
+          - { label: "Nombre", name: "nombre", widget: "string", default: "Nuevo Producto" }
+          - { label: "Precio", name: "precio", widget: "number", valueType: "int", default: 0 }
+          - { label: "Descripción", name: "descripcion", widget: "text", default: "Descripción del producto" }
+          - { label: "Imagen", name: "imagen", widget: "image", default: "assets/img/products/placeholder.jpg" }
           - { label: "Badge", name: "badge", widget: "string", required: false }
 
   - name: "testimonios"
     label: "💖 Testimonios"
+    label_singular: "Testimonio"
     folder: "data"
     file: "data/testimonios.json"
     create: false
+    identifier_field: "nombre"
     fields:
       - name: "lista"
         label: "Lista de Testimonios"
+        label_singular: "Testimonio"
         widget: "list"
+        summary: "{{fields.nombre}}"
         fields:
-          - { label: "Nombre", name: "nombre", widget: "string" }
-          - { label: "Comentario", name: "comentario", widget: "text" }
-          - { label: "Avatar", name: "avatar", widget: "string" }
-          - { label: "Rol", name: "rol", widget: "string" }
+          - { label: "Nombre", name: "nombre", widget: "string", default: "Cliente feliz" }
+          - { label: "Comentario", name: "comentario", widget: "text", default: "¡Me encantó!" }
+          - { label: "Avatar", name: "avatar", widget: "string", default: "🌸" }
+          - { label: "Rol", name: "rol", widget: "string", default: "Cliente feliz" }
+
+  - name: "especialidades"
+    label: "🌸 Especialidades"
+    label_singular: "Especialidad"
+    folder: "data"
+    file: "data/especialidades.json"
+    create: false
+    identifier_field: "titulo"
+    fields:
+      - name: "lista"
+        label: "Lista de Especialidades"
+        label_singular: "Especialidad"
+        widget: "list"
+        summary: "{{fields.titulo}}"
+        fields:
+          - { label: "Título", name: "titulo", widget: "string", default: "Nueva especialidad" }
+          - { label: "Descripción", name: "descripcion", widget: "text", default: "Descripción de la especialidad" }
+          - { label: "Icono", name: "icono", widget: "string", default: "🍞" }
+          - { label: "Etiqueta", name: "etiqueta", widget: "string", required: false }
+
+  - name: "equipo"
+    label: "🎀 Equipo Chibi"
+    label_singular: "Miembro"
+    folder: "data"
+    file: "data/equipo.json"
+    create: false
+    identifier_field: "nombre"
+    fields:
+      - name: "lista"
+        label: "Lista del Equipo"
+        label_singular: "Miembro"
+        widget: "list"
+        summary: "{{fields.nombre}}"
+        fields:
+          - { label: "Nombre", name: "nombre", widget: "string", default: "Nuevo miembro" }
+          - { label: "Rol", name: "rol", widget: "string", default: "Rol" }
+          - { label: "Descripción", name: "descripcion", widget: "text", default: "Descripción del miembro" }
+          - { label: "Imagen", name: "imagen", widget: "image", default: "assets/img/characters/placeholder.png" }
 
   - name: "configuracion"
     label: "⚙️ Configuración"
     files:
       - name: "general"
-        label: "Datos"
+        label: "Datos de la panadería"
         file: "data/config.json"
         fields:
-          - { label: "Horario L-V", name: "horario_lv", widget: "string" }
-          - { label: "Horario S-D", name: "horario_sd", widget: "string" }
-          - { label: "Teléfono", name: "telefono", widget: "string" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Dirección", name: "direccion", widget: "text" }
-          - { label: "Mensaje Footer", name: "footer_mensaje", widget: "text" }
+          - { label: "Horario L-V", name: "horario_lv", widget: "string", default: "Lun - Vie: 9:00 - 20:00" }
+          - { label: "Horario S-D", name: "horario_sd", widget: "string", default: "Sáb - Dom: 10:00 - 18:00" }
+          - { label: "Teléfono", name: "telefono", widget: "string", default: "+52 55 1234 5678" }
+          - { label: "Email", name: "email", widget: "string", default: "hola@chibicheff.com" }
+          - { label: "Dirección", name: "direccion", widget: "text", default: "Av. Kawaii 123, Col. Chibi Park, CDMX, México" }
+          - { label: "Mensaje Footer", name: "footer_mensaje", widget: "text", default: "Hecho con amor y mucha azúcar 💖" }
