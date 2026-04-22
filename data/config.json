@@ -5,5 +5,5 @@
   "email": "hola@chibicheff.com",
   "direccion": "Av. Kawaii 123, Col. Chibi Park, CDMX, México",
   "footer_mensaje": "Hecho con amor y mucha azúcar 💖"
-  - { label: "Precio", name: "precio", widget: "number", valueType: "int" }
+  label: "Precio", name: "precio", widget: "number", valueType: "int"
 }
